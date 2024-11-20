@@ -18,3 +18,16 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 
 # Apply other settings
 source ~/.bashrc
+# List of software to install
+packages=(
+    "git"
+    "curl"
+    "zsh"
+    "vim"
+    "gnome-tweaks"
+)
+
+# Install each package
+for pkg in "${packages[@]}"; do
+    sudo apt install -y $pkg
+done
